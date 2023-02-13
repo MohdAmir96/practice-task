@@ -1,30 +1,16 @@
-import Register from "./component/Register";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Admin from "./component/Admin";
-import Home from "./component/Home";
-import Signin from "./component/Signin";
-import { UserAuthContextProvider } from "./context/authContext";
-import ProtectedRout from "./component/ProtectedRout";
-function App() {
+
+import React from 'react'
+import './App.css'
+import Csv from './components/CsvUploader'
+import ModalProvider from './context/ModalContext'
+const CsvUploader = () => {
   return (
-
-    <UserAuthContextProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route
-            path="/admin"
-            element={
-              <ProtectedRout>
-                <Admin />
-              </ProtectedRout>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </UserAuthContextProvider>
-
-
+    <div>
+      <ModalProvider>
+        <Csv />
+      </ModalProvider>
+    </div>
   )
 }
-export default App
+
+export default CsvUploader

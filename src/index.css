@@ -1,13 +1,5 @@
-:root{
-    --black :black;
-    --white : white;
+body{
+    background-color:#d9d5d5 !important;
+    color: black !important;
+    height: 100vh;
 }
-[data-theme="light"]{
-    --black :black;
-    --white : white
-}
-[data-theme="dark"]{
-    --black :white;
-    --white : black;
-}
-
